@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Student Study Hub - free study notes, books, programming resources, assignments and past papers.">
+  <title>Student Study Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">📚 Student Study Hub</div>
+  <button class="menu" onclick="document.querySelector('nav').classList.toggle('show')">☰</button>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#notes">Notes</a>
+    <a href="#books">Books</a>
+    <a href="#programming">Programming</a>
+    <a href="#assignments">Assignments</a>
+    <a href="#papers">Past Papers</a>
+    <a href="#add">Add Material</a>
+  </nav>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div>
+    <span class="badge">FREE STUDY RESOURCES</span>
+    <h1>Learn Better.<br><span>Study Smarter.</span></h1>
+    <p>Notes, books, programming resources, assignments and past papers — organized in one simple place for students.</p>
+    <div class="hero-buttons">
+      <a class="btn primary" href="#notes">Explore Notes</a>
+      <a class="btn secondary" href="#add">Add Material</a>
+    </div>
+  </div>
+  <div class="hero-card">
+    <div>🎓</div>
+    <h3>Student Study Hub</h3>
+    <p>Your digital study corner</p>
+  </div>
+</section>
+
+<section class="stats">
+  <div><strong>📘</strong><span>Study Notes</span></div>
+  <div><strong>📚</strong><span>Books</span></div>
+  <div><strong>💻</strong><span>Programming</span></div>
+  <div><strong>📝</strong><span>Past Papers</span></div>
+</section>
+
+<section id="notes" class="section">
+  <div class="section-title"><span>01</span><div><h2>Study Notes</h2><p>Subject-wise notes for quick revision.</p></div></div>
+  <div class="grid">
+    <article class="card"><div class="icon">💻</div><h3>Computer Science</h3><p>Computer fundamentals, data structures and core concepts.</p><a href="#add">Add / View Notes →</a></article>
+    <article class="card"><div class="icon">⚙️</div><h3>Software Engineering</h3><p>SDLC, requirements, testing, design and project concepts.</p><a href="#add">Add / View Notes →</a></article>
+    <article class="card"><div class="icon">🤖</div><h3>Artificial Intelligence</h3><p>AI fundamentals, machine learning and intelligent systems.</p><a href="#add">Add / View Notes →</a></article>
+    <article class="card"><div class="icon">🔐</div><h3>Cyber Security</h3><p>Security basics, threats, protection and safe computing.</p><a href="#add">Add / View Notes →</a></article>
+  </div>
+</section>
+
+<section id="books" class="section alt">
+  <div class="section-title"><span>02</span><div><h2>Books</h2><p>Add your legally shareable books and learning material.</p></div></div>
+  <div class="empty-box">📖 <b>Books Library</b><p>Upload or link only books/material that you own or are allowed to distribute.</p></div>
+</section>
+
+<section id="programming" class="section">
+  <div class="section-title"><span>03</span><div><h2>Programming</h2><p>Build your coding knowledge step by step.</p></div></div>
+  <div class="grid">
+    <article class="card"><div class="icon">C++</div><h3>C++</h3><p>Variables, conditions, loops, functions, arrays and OOP.</p></article>
+    <article class="card"><div class="icon">🐍</div><h3>Python</h3><p>Python basics, problem solving and beginner projects.</p></article>
+    <article class="card"><div class="icon">🌐</div><h3>Web Development</h3><p>HTML, CSS and JavaScript learning resources.</p></article>
+  </div>
+</section>
+
+<section id="assignments" class="section alt">
+  <div class="section-title"><span>04</span><div><h2>Assignments</h2><p>Organize useful assignment examples and templates.</p></div></div>
+  <div class="empty-box">📝 <b>Assignments Library</b><p>Add your own notes, templates and permitted study examples here.</p></div>
+</section>
+
+<section id="papers" class="section">
+  <div class="section-title"><span>05</span><div><h2>Past Papers</h2><p>Keep previous exam papers organized by subject and semester.</p></div></div>
+  <div class="empty-box">📄 <b>Past Papers Library</b><p>Add PDF links or files when you publish the site.</p></div>
+</section>
+
+<section id="add" class="section add-section">
+  <div class="section-title"><span>06</span><div><h2>Add Study Material</h2><p>Use this form to create resource cards on this device.</p></div></div>
+  <div class="form-card">
+    <label>Material title</label>
+    <input id="title" placeholder="e.g. C++ Chapter 1 Notes">
+    <label>Category</label>
+    <select id="category">
+      <option>Study Notes</option><option>Books</option><option>Programming</option>
+      <option>Assignments</option><option>Past Papers</option>
+    </select>
+    <label>PDF / Website link</label>
+    <input id="link" type="url" placeholder="https://...">
+    <button class="btn primary" onclick="addMaterial()">Add Material</button>
+    <p class="small">Note: this demo stores added cards in your browser only. For a public library, upload files to your hosting/storage and add their links.</p>
+  </div>
+  <div id="materials" class="materials"></div>
+</section>
+</main>
+
+<footer>
+  <h3>📚 Student Study Hub</h3>
+  <p>Free learning resources for students.</p>
+  <p class="copyright">© 2026 Student Study Hub</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
